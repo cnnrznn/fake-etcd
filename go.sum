@@ -1,0 +1,9 @@
+github.com/cnnrznn/raft v0.0.0-20210921001012-efdbab1ade7c h1:ed1WxkqrviAgzmlCE+5shaB+ftuTv4neKH2loY3MEh0=
+github.com/cnnrznn/raft v0.0.0-20210921001012-efdbab1ade7c/go.mod h1:bLWdBYMV3LeVS82+/01mFOKLFTD4PsV2vg6hxW7JbUQ=
+github.com/cnnrznn/raft v1.0.0 h1:oeqrokuWygZQRcMSmRQTMI6Fssnx4suWxYKAxTFeeEY=
+github.com/cnnrznn/raft v1.0.0/go.mod h1:bLWdBYMV3LeVS82+/01mFOKLFTD4PsV2vg6hxW7JbUQ=
+github.com/google/uuid v1.2.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/google/uuid v1.3.0 h1:t6JiXgmwXMjEs8VusXIJk2BXHsn+wx8BZdTaoZ5fu7I=
+github.com/google/uuid v1.3.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/gorilla/mux v1.8.0 h1:i40aqfkR1h2SlN9hojwV5ZA91wcXFOvkdNIeFDP5koI=
+github.com/gorilla/mux v1.8.0/go.mod h1:DVbg23sWSpFRCP0SfiEN6jmj59UnW/n46BH5rLB71So=
