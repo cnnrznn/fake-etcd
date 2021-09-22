@@ -28,7 +28,7 @@ type Server struct {
 
 func main() {
 	// Read peer file and my address
-	config := readPeers()
+	config := readConfig()
 	args := os.Args
 	id, _ := strconv.Atoi(args[1])
 
@@ -63,7 +63,7 @@ func main() {
 	log.Fatal(http.ListenAndServe(config.APIs[id], nil))
 }
 
-func readPeers() *config {
+func readConfig() *config {
 	bytes, err := os.ReadFile("peers.json")
 	if err != nil {
 		fmt.Println("error reading peer file")
