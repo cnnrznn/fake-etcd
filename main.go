@@ -47,14 +47,19 @@ func main() {
 
 	go func() {
 		for {
-			time.Sleep(5000 * time.Millisecond)
+			time.Sleep(100 * time.Millisecond)
 			server.processUpdates()
+		}
+	}()
+
+	go func() {
+		for {
+			time.Sleep(5000 * time.Millisecond)
 			fmt.Println(server.data)
 		}
 	}()
 
 	http.HandleFunc("/", server.handleHTTP)
-
 	log.Fatal(http.ListenAndServe(config.APIs[id], nil))
 }
 

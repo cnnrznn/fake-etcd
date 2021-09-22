@@ -63,6 +63,9 @@ func (s *Server) handleGet(w http.ResponseWriter, r *http.Request) {
 
 	key := r.URL.Query()["key"][0]
 	val := s.data.Get(key)
+	if val == "" {
+		val = "null"
+	}
 
 	resp := Response{
 		Leader: s.config.APIs[s.raft.Leader()],
