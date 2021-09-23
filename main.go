@@ -33,13 +33,13 @@ func main() {
 	id, _ := strconv.Atoi(args[1])
 
 	// Make raft instance
-	raft := raft.New(id, config.Peers)
+	r := raft.New(id, config.Peers)
 
 	// Run raft
-	go raft.Run()
+	go r.Run()
 
 	server := Server{
-		raft:     raft,
+		raft:     r,
 		config:   config,
 		data:     store.New(),
 		lastSeen: 0,
@@ -64,7 +64,7 @@ func main() {
 }
 
 func readConfig() *config {
-	bytes, err := os.ReadFile("peers.json")
+	bytes, err := os.ReadFile("config.json")
 	if err != nil {
 		fmt.Println("error reading peer file")
 		return nil
@@ -82,7 +82,7 @@ func (s *Server) processUpdates() {
 
 	for _, e := range entries {
 		sp := strings.Split(e.Msg, ":")
-		key, value := sp[0], sp[1]
-		s.data.Set(key, value)
+		key, val := sp[0], sp[1]
+		s.data.Set(key, val)
 	}
 }
